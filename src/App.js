@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import alanBtn from '@alan-ai/alan-sdk-web'
 import Layout from './components/Layout'
 import NewDetail from './components/NewDetail'
+import Main from './components/Mian'
 import './App.css'
 const App = () => {
   const api = "7284e004712265cd59071cb9497eff412e956eca572e1d8b807a3e2338fdd0dc/stage"
@@ -26,6 +27,7 @@ const App = () => {
   return (
     <Layout>
       <NewDetail />
+      <Main/>
     </Layout>
   )
 }
