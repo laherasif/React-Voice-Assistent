@@ -16,25 +16,23 @@ const App = () => {
         key: api,
         onCommand: ({ command, articles }) => {
           if (command === 'newHeadlines') {
-            // setNewHeadlinese(articles)
-            console.log("Ar" , articles)
+            setNewHeadlinese(articles)
           }
         }
       })
     )
   }, [])
 
-  console.log("nes" , newHeadlines)
 
   return (
     <Layout>
       {newHeadlines &&
         newHeadlines.map((item) => {
-          return <NewDetail articles={newHeadlines} />
+          return <NewDetail articles={item} />
         })
       }
 
-      {newHeadlines.length > 0 ? "" : <Main />}
+      {newHeadlines.length > 0 ? <NewDetail/> : <Main />}
     </Layout>
   )
 }
